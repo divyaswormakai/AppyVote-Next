@@ -1,0 +1,27 @@
+.logOutFormDiv {
+  width: 100%;
+  padding: 2em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.logoutBtn {
+  text-decoration: none;
+  color: #666666;
+  font-weight: bold;
+  margin: 5% 0%;
+  width: 50%;
+  padding: 5% 5%;
+  background-color: #f0f3f6;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 8px 8px 8px #746f6f75;
+}
+
+.logoutBtn:hover {
+  cursor: pointer;
+}

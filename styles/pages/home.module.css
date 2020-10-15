@@ -1,0 +1,36 @@
+.homeDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100vh;
+}
+
+.homeDivInfo {
+  width: 50%;
+  padding: 5em;
+  color: white;
+}
+.homeDivInfo > h1 {
+  font-size: 50px;
+}
+.homeDivSvg {
+  width: 50%;
+}
+.homeDivSvg > img {
+  max-height: 80vh;
+}
+
+.homeDivInfoVoteBtn {
+  background-color: #f0f3f6;
+  color: #a3268e;
+  align-items: center;
+  text-decoration: none;
+  margin: 10px;
+  padding: 20px 50px;
+  border-radius: 100px;
+  z-index: 2;
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.8);
+}
+.homeDivInfoVoteBtn:hover {
+  cursor: pointer;
+}

@@ -1,0 +1,24 @@
+.chartDiv {
+  max-width: 90%;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.chartDivDougnut {
+  margin: 5%;
+  background-color: white;
+  border-radius: 50px;
+  padding: 3% 5%;
+}
+
+.chartDivBubble {
+  height: 50%;
+  margin: 5%;
+  background-color: white;
+  border-radius: 50px;
+  padding: 1% 4%;
+}

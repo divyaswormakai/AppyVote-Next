@@ -1,0 +1,18 @@
+.overviewChart {
+  width: 80%;
+  height: 80%;
+  padding: 5%;
+}
+
+.overviewHeader {
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.overviewChartDataContainer {
+  background-color: white;
+  padding: 5%;
+  border-radius: 50px;
+}

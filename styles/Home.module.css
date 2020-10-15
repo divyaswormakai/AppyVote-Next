@@ -1,0 +1,111 @@
+.container {
+  padding: 0px;
+}
+
+.App {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+.sidebar {
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  align-items: center;
+  width: 20vw;
+  height: 100vh;
+  padding: 20px 0px;
+}
+
+.sidebarLogo {
+  margin-bottom: 25px;
+}
+
+.sidebarLink {
+  display: flex;
+  width: 50%;
+  margin: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 15px 10px;
+  padding-left: 15%;
+  border-radius: 100px;
+  box-shadow: 10px 8px 8px #aaa2a256 inset;
+}
+
+.sidebarLink:hover label:hover {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.sidebarLink > .sidebarLinkIcon {
+  color: #727272;
+}
+
+.sidebarLinkActive {
+  display: flex;
+  width: 50%;
+  margin: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 15px 10px;
+  padding-left: 15%;
+  border-radius: 100px;
+  background-color: #f0f3f6;
+  box-shadow: 8px 8px 8px #746f6f75;
+}
+
+.sidebarLinkActive > label {
+  color: #e91f66;
+}
+
+.sidebarLinkActive > .sidebarLinkIcon {
+  color: #e91f66;
+}
+
+.sidebarLinkActive:hover label:hover {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.sidebarLinkActive > .sidebarLinkIcon {
+  color: #727272;
+}
+
+.mainContent {
+  background-image: linear-gradient(#e91f66, #d62fc3);
+  width: 80vw;
+  margin-left: 20vw;
+  position: relative;
+  overflow: hidden;
+}
+
+.circle1 {
+  width: 40vw;
+  height: 40vw;
+  position: absolute;
+  right: 15vw;
+  top: -20%;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 100%;
+  pointer-events: none;
+}
+
+.circle2 {
+  width: 60vw;
+  height: 60vw;
+  position: absolute;
+  right: 10vw;
+  bottom: -50%;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 100%;
+  pointer-events: none;
+}
