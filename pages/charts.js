@@ -41,8 +41,8 @@ const Charts = () => {
                 <h2>Votes according to age group</h2>
                 <Doughnut
                   data={ageData}
-                  width={600}
-                  height={500}
+                  width={'70%'}
+                  height={'70%'}
                   options={{
                     legend: {
                       display: true,
@@ -59,24 +59,20 @@ const Charts = () => {
                 <BubbleChart
                   graph={{
                     zoom: 1,
-                    offsetX: -0.05,
-                    offsetY: -0.01,
                   }}
-                  width={1000}
-                  height={1000}
+                  width={500}
+                  height={500}
                   padding={10} // optional value, number that set the padding between bubbles
                   showLegend={false} // optional value, pass false to disable the legend.
                   valueFont={{
                     family: 'Arial',
                     size: 12,
                     color: '#fff',
-                    weight: 'bold',
                   }}
                   labelFont={{
                     family: 'Arial',
                     size: 16,
                     color: '#fff',
-                    weight: 'bold',
                   }}
                   //Custom bubble/legend click functions such as searching using the label, redirecting to other page
                   data={bubbleChartData}
@@ -126,7 +122,7 @@ const bubbleChartData = [
   { label: 'Databases', value: 22 },
   { label: 'DevOps', value: 22 },
   { label: 'Javascript', value: 29 },
-  { label: 'Languages / Frameworks', value: 25 },
+  { label: 'Languages', value: 25 },
   { label: 'Front End', value: 26 },
   { label: 'Content', value: 26 },
 ];

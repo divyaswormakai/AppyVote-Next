@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
 
 import LoginForm from '../components/LoginForm';
 import VoteForm from '../components/VoteForm';
@@ -16,8 +15,6 @@ const Vote = () => {
   const [showCompleteForm, setShowCompleteForm] = useState(false);
   const [showVoteForm, setShowVoteForm] = useState(false);
   const [showLogoutForm, setShowLogoutForm] = useState(false);
-
-  const router = useRouter();
 
   useEffect(() => {
     formSelection();

@@ -1,10 +1,37 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useRouter } from 'next/router';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import HomeStyle from '../styles/pages/home.module.css';
 import Sidebar from '../components/Sidebar';
 
 export default function Home() {
+  const router = useRouter();
+  useEffect(() => {
+    CheckRedirect();
+  }, []);
+
+  const CheckRedirect = () => {
+    let path = window.location.pathname;
+    let params = new URL(document.location).searchParams;
+    console.log(params.get('id'));
+    if (path !== '/') {
+      console.log(path);
+      if (path === '/vote') {
+        console.log('In vote');
+        if (params.get('id') && params.get('token')) {
+          console.log('We have the parameters');
+          localStorage.setItem('appy-vote-user', params.get('id'));
+          localStorage.setItem('appy-vote-user-token', params.get('token'));
+          router.push('/vote');
+        } else {
+          router.push('/vote');
+        }
+      }
+      router.push(path);
+    }
+  };
+
   return (
     <div className={styles.container}>
       <Head>
