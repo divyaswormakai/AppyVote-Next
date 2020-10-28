@@ -5,18 +5,32 @@ import styles from './../styles/pages/overview.module.css';
 import mainStyle from '../styles/Home.module.css';
 import Sidebar from '../components/Sidebar';
 
+let tempData = {
+  labels: ['Primary Votes', 'Secondary Votes'],
+  datasets: [
+    {
+      label: 'Berney Sanders',
+      data: [2, 1],
+      backgroundColor: 'rgba(0, 99, 132, 1)',
+    },
+    {
+      label: 'Donald J. Trump',
+      data: [1, 0],
+      backgroundColor: 'rgba(255, 255, 132, 1)',
+    },
+  ],
+};
+
 const Overview = () => {
   const [chartData, setChartData] = useState({});
   let socket = null;
   useEffect(() => {
     // let endpoint = 'http://localhost:3001';
     let endpoint = 'https://makai-test.herokuapp.com';
-    // let endpoint = '/';
     socket = socketIOClient(endpoint);
     socket.on('getOverviewData', (data) => {
       console.log(data);
       setChartData(data);
-      // console.log('Getting data');
     });
     return () => {
       socket.disconnect();
@@ -53,6 +67,15 @@ const Overview = () => {
                     },
                     // responsive: true,
                     maintainAspectRatio: false,
+                    scales: {
+                      yAxes: [
+                        {
+                          ticks: {
+                            beginAtZero: true,
+                          },
+                        },
+                      ],
+                    },
                   }}
                 />
               </div>

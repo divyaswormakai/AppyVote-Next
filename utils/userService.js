@@ -30,4 +30,18 @@ const completeProfile = async (userDetails) => {
   }
 };
 
-export default { getUserDetails, completeProfile };
+const getCounts = async () => {
+  try {
+    let user = await axios.get('/api/totalCounts');
+    if (user) {
+      return user.data;
+    } else {
+      throw new Error('Update user failed');
+    }
+  } catch (err) {
+    console.log(err);
+    return { error: err };
+  }
+};
+
+export default { getUserDetails, completeProfile, getCounts };

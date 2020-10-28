@@ -10,10 +10,12 @@
 .bgTwitter,
 .bgYoutube,
 .bgNews,
-.bgForum {
-  width: 25%;
+.bgForum,
+.bgComment {
+  min-width: 30%;
   height: 100vh;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
   border-right: 1px black;
 }
 
@@ -109,7 +111,8 @@
   .bgTwitter,
   .bgYoutube,
   .bgNews,
-  .bgForum {
+  .bgForum,
+  .bgComment {
     min-width: 90vw;
     height: 100vh;
     overflow: scroll;

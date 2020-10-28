@@ -1,14 +1,18 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import HomeStyle from '../styles/pages/home.module.css';
 import Sidebar from '../components/Sidebar';
+import userService from '../utils/userService';
 
 export default function Home() {
+  const [userCount, setUserCount] = useState(0);
+  const [votesCount, setVotesCount] = useState(0);
   const router = useRouter();
   useEffect(() => {
     CheckRedirect();
+    GetStats();
   }, []);
 
   const CheckRedirect = () => {
@@ -32,6 +36,16 @@ export default function Home() {
     }
   };
 
+  const GetStats = async () => {
+    try {
+      let data = await userService.getCounts();
+      console.log(data);
+      setUserCount(data.userCount);
+      setVotesCount(data.voteCount);
+    } catch (err) {
+      alert(err);
+    }
+  };
   return (
     <div className={styles.container}>
       <Head>
@@ -56,6 +70,16 @@ export default function Home() {
               <a href="/vote" className={HomeStyle.homeDivInfoVoteBtn}>
                 Vote Now
               </a>
+              <div className={HomeStyle.countDiv}>
+                <div className={HomeStyle.countDivCol}>
+                  <p>Total Users:</p>
+                  <h1>{userCount}</h1>
+                </div>
+                <div className={HomeStyle.countDivCol}>
+                  <p>Total Votes:</p>
+                  <h1>{votesCount}</h1>
+                </div>
+              </div>
             </div>
             <div className={HomeStyle.homeDivSvg}>
               <img src="/home.png" alt="Homelogo" />

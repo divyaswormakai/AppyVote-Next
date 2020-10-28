@@ -7,6 +7,7 @@ import Twitter from '../components/BGComponents/Twitter';
 import News from '../components/BGComponents/News';
 import Youtube from '../components/BGComponents/Youtube';
 import Sidebar from '../components/Sidebar';
+import Comments from '../components/BGComponents/Comments';
 
 const BattleGround = () => {
   return (
@@ -32,6 +33,9 @@ const BattleGround = () => {
           </div>
           <div className={styles.bgForum}>
             <Forum />
+          </div>
+          <div className={styles.bgComment}>
+            <Comments />
           </div>
         </div>
       </div>

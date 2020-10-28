@@ -28,6 +28,8 @@
   height: '100%';
 }
 .doughnutChartContainer {
+  width: 80vh;
+  height: 80vh;
 }
 
 @media screen and (max-width: 768px) {
