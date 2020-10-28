@@ -61,3 +61,25 @@
   background-color: tomato;
   color: white;
 }
+
+@media screen and (max-width: 768px) {
+  .voteDiv {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+  }
+  .voteDivInfo {
+    width: 90%;
+    text-align: center;
+  }
+  .voteDivForms {
+    width: 90%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .voteDivFormsContainer {
+    min-width: 100%;
+  }
+}

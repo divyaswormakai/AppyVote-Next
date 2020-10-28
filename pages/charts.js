@@ -39,44 +39,47 @@ const Charts = () => {
             <>
               <div className={styles.chartDivDougnut}>
                 <h2>Votes according to age group</h2>
-                <Doughnut
-                  data={ageData}
-                  width={'70%'}
-                  height={'70%'}
-                  options={{
-                    legend: {
-                      display: true,
-                      position: 'right',
-                    },
-                    responsive: true,
-                    maintainAspectRatio: true,
-                  }}
-                />
+                <div class={styles.doughnutChartContainer}>
+                  <Doughnut
+                    data={ageData}
+                    width={'70%'}
+                    height={'70%'}
+                    options={{
+                      legend: {
+                        display: true,
+                        position: 'right',
+                      },
+                      // responsive: true,
+                      maintainAspectRatio: false,
+                    }}
+                  />
+                </div>
               </div>
               <div className={styles.chartDivBubble}>
                 <h2>Votes according to states</h2>
-
-                <BubbleChart
-                  graph={{
-                    zoom: 1,
-                  }}
-                  width={500}
-                  height={500}
-                  padding={10} // optional value, number that set the padding between bubbles
-                  showLegend={false} // optional value, pass false to disable the legend.
-                  valueFont={{
-                    family: 'Arial',
-                    size: 12,
-                    color: '#fff',
-                  }}
-                  labelFont={{
-                    family: 'Arial',
-                    size: 16,
-                    color: '#fff',
-                  }}
-                  //Custom bubble/legend click functions such as searching using the label, redirecting to other page
-                  data={bubbleChartData}
-                />
+                <div class={styles.bubbleChartContainer}>
+                  <BubbleChart
+                    graph={{
+                      zoom: 1,
+                    }}
+                    width={400}
+                    height={400}
+                    padding={10} // optional value, number that set the padding between bubbles
+                    showLegend={false} // optional value, pass false to disable the legend.
+                    valueFont={{
+                      family: 'Arial',
+                      size: 12,
+                      color: '#fff',
+                    }}
+                    labelFont={{
+                      family: 'Arial',
+                      size: 16,
+                      color: '#fff',
+                    }}
+                    //Custom bubble/legend click functions such as searching using the label, redirecting to other page
+                    data={bubbleChartData}
+                  />
+                </div>
               </div>
             </>
           ) : null}

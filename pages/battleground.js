@@ -16,6 +16,9 @@ const BattleGround = () => {
       <div className={mainStyle.mainContent}>
         <div className={mainStyle.circle1}></div>
         <div className={mainStyle.circle2}></div>
+        <div className={styles.header}>
+          <h1>AppyVote</h1>
+        </div>
 
         <div className={styles.bgContent}>
           <div className={styles.bgTwitter}>

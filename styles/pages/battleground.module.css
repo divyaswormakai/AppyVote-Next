@@ -3,6 +3,7 @@
   flex-direction: row;
   background-color: white;
   height: 100vh;
+  overflow-x: scroll;
 }
 
 .bgContentChild,
@@ -94,4 +95,35 @@
   border-radius: 25px;
   padding: 0% 5%;
   padding-bottom: 10%;
+}
+
+.header {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .bgContent {
+    margin-top: 20%;
+  }
+  .bgContentChild,
+  .bgTwitter,
+  .bgYoutube,
+  .bgNews,
+  .bgForum {
+    min-width: 90vw;
+    height: 100vh;
+    overflow: scroll;
+    border-right: 1px black;
+  }
+
+  .header {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 10px;
+  }
+
+  .header > h1 {
+    color: white;
+  }
 }

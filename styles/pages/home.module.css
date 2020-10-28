@@ -34,3 +34,12 @@
 .homeDivInfoVoteBtn:hover {
   cursor: pointer;
 }
+
+@media screen and (max-width: 768px) {
+  .homeDiv {
+    flex-direction: column;
+  }
+  .homeDivSvg > img {
+    max-height: 50vh;
+  }
+}

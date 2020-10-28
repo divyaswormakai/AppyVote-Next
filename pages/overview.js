@@ -51,7 +51,8 @@ const Overview = () => {
                       display: true,
                       position: 'top',
                     },
-                    maintainAspectRatio: true,
+                    // responsive: true,
+                    maintainAspectRatio: false,
                   }}
                 />
               </div>

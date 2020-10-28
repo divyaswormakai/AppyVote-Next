@@ -47,16 +47,10 @@ export default function Home() {
           <div className={styles.circle2}></div>
           <div className={HomeStyle.homeDiv}>
             <div className={HomeStyle.homeDivInfo}>
-              <h1>
-                It's time to
-                <br />
-                Choose your
-                <br />
-                Candidate!
-              </h1>
+              <h1>Welcome to AppyVote...</h1>
               <p>
-                Sign in to register your vote here and now. Vote for who you
-                want as your next president.
+                An all-in-one platform where you can bet on who will win the
+                elections, get all your news and tweets here.
               </p>
               <br />
               <a href="/vote" className={HomeStyle.homeDivInfoVoteBtn}>
