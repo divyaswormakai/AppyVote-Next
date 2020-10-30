@@ -39,6 +39,10 @@
   box-shadow: 10px 8px 8px #aaa2a256 inset;
 }
 
+.sidebarLink > label {
+  color: #727272;
+}
+
 .sidebarLink:hover label:hover {
   cursor: pointer;
   text-decoration: none;
@@ -74,10 +78,6 @@
 .sidebarLinkActive:hover label:hover {
   cursor: pointer;
   text-decoration: none;
-}
-
-.sidebarLinkActive > .sidebarLinkIcon {
-  color: #727272;
 }
 
 .mainContent {

@@ -8,6 +8,7 @@ import News from '../components/BGComponents/News';
 import Youtube from '../components/BGComponents/Youtube';
 import Sidebar from '../components/Sidebar';
 import Comments from '../components/BGComponents/Comments';
+import Tlk from '../components/BGComponents/Tlk';
 
 const BattleGround = () => {
   return (
@@ -36,6 +37,9 @@ const BattleGround = () => {
           </div>
           <div className={styles.bgComment}>
             <Comments />
+          </div>
+          <div className={styles.bgTlk}>
+            <Tlk />
           </div>
         </div>
       </div>

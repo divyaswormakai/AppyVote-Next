@@ -11,7 +11,8 @@
 .bgYoutube,
 .bgNews,
 .bgForum,
-.bgComment {
+.bgComment,
+.bgTlk {
   min-width: 30%;
   height: 100vh;
   overflow-y: scroll;
@@ -103,6 +104,10 @@
   display: none;
 }
 
+.tlkContent {
+  height: 100%;
+}
+
 @media screen and (max-width: 768px) {
   .bgContent {
     margin-top: 20%;
@@ -112,7 +117,8 @@
   .bgYoutube,
   .bgNews,
   .bgForum,
-  .bgComment {
+  .bgComment,
+  .bgTlk {
     min-width: 90vw;
     height: 100vh;
     overflow: scroll;
